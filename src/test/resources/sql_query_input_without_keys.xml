@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns1:AddressData_jdbc_REQUEST_MT xmlns:ns1="https://figaf.com">
+  <AddressData>
+    <query action="SQL_QUERY">
+      <access>
+        select DatasaetID, Loengeneration, Loenkoersel, LoengruppeKode from dbo.SLS_Forbrug
+      </access>
+    </query>
+  </AddressData>
+</ns1:AddressData_jdbc_REQUEST_MT>

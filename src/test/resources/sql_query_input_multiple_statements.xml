@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns1:PersonaleDataKontering_jdbc_REQUEST_MT xmlns:ns1="https://figaf.com">
+    <StatementName1>
+        <dbTableName action="SELECT">
+            <table>dbo.SLS_Forbrug</table>
+            <access>
+                <DatasaetID/>
+                <Loengeneration/>
+                <Loenkoersel/>
+                <LoengruppeKode/>
+            </access>
+            <key><!-- always EQ -->
+                <Loengeneration compareOperation="EQ">123</Loengeneration>
+            </key>
+        </dbTableName>
+    </StatementName1>
+    <StatementName2>
+        <dbTableName action="SELECT">
+            <table>dbo.SLS_Forbrug</table>
+            <access>
+                <DatasaetID/>
+                <Loengeneration/>
+                <Loenkoersel/>
+                <LoengruppeKode/>
+            </access>
+            <key><!-- always EQ -->
+                <Loengeneration compareOperation="EQ">123</Loengeneration>
+            </key>
+        </dbTableName>
+    </StatementName2>
+</ns1:PersonaleDataKontering_jdbc_REQUEST_MT>

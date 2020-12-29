@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns1:AddressData_jdbc_REQUEST_MT xmlns:ns1="https://figaf.com">
+    <AddressData>
+        <query action="SQL_QUERY">
+            <access>
+                SELECT
+                Ans.LoenLoebenr AS Loennummer,
+                Dimensions.Person_CPR_T2.Fornavn AS Fornavn,
+                Dimensions.Person_CPR_T2.Efternavn AS Efternavn,
+                Meta.Now.Now
+                FROM Dimensions.Person_CPR_T2
+                RIGHT OUTER JOIN Dimensions.SLS_ErAnsatI_T1 ON ( Dimensions.Person_CPR_T2.SLS_ErAnsatIID = Dimensions.SLS_ErAnsatI_T1.SLS_ErAnsatIID )
+                       WHERE
+                Meta.Now.Now >= Dimensions.Person_CPR_T2.DW_Valid_From
+                AND Meta.Now.Now &lt;= Dimensions.Person_CPR_T2.DW_Valid_To
+            </access>
+            <key>
+                <Loengeneration>123</Loengeneration>
+                <Loenkoersel>3212</Loenkoersel>
+            </key>
+        </query>
+    </AddressData>
+</ns1:AddressData_jdbc_REQUEST_MT>

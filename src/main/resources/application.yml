@@ -1,0 +1,6 @@
+server:
+  port: ${SERVER_PORT:4444}
+  
+db:
+  url: ${DB_URL:jdbc:sqlserver://127.0.0.1:1433;databaseName=temp1;}
+  
